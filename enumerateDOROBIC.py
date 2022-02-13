@@ -1,0 +1,1 @@
+dorobic wyuzyci tej funkci

@@ -1,14 +1,9 @@
 #-------------------------
-from tabnanny import check
-
-from idna import check_initial_combiner
-
-
 def new_game():
     guesses = []
     correct_guesses = 0
     question_num = 1
-    for key in questions:
+    for key,value in questions.items():
         print("------------------------")
         print(key)
         print(" Options:  ")
@@ -18,7 +13,7 @@ def new_game():
         guesses.append(guess)
         # print(questions[key])
         # print(questions.get(key))
-        correct_guesses += check_answer(questions[key], guess)
+        correct_guesses += check_answer(value, guess)
         question_num += 1
 
     display_score(correct_guesses,guesses)
@@ -63,7 +58,7 @@ def play_again():
     
 
 questions = {
-    "Who isDominik ? ":"A",
+    "Who is Dominik ? ":"A",
     "Jak se mosz? ":"B",
     "Je Zeme kulata? ":"C",
     "Je Iza pierda? ":"A"

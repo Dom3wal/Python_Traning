@@ -61,6 +61,13 @@ import os
 
 import os
 
-os.remove('test.txt') # remove a file
+# os.remove('test.txt') # remove a file
 #os.rmdir(path) # delete file or empty folder
 # shutil.rmtree(path) # delete files and or folders
+
+path = "test2.txt"
+name = "DOminik"
+if os.path.exists(path):
+    print(f" {name} I have found an file")
+    with open(path,"a") as file:
+        file.write("Hello Worldssssssssss")

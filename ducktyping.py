@@ -2,15 +2,13 @@
 #               class type is not checked if minimum methods/attributes are present
 #               “If it walks like a duck, and it quacks like a duck, then it must be a duck.”
 
-from xml.dom.minidom import NamedNodeMap
-
 
 class Bird():
-    def __init__(self, name):
+    def __init__(self,name):
         self.name = name
     
-    def walk(self,name):
-        print("This" + name + " is walking")
+    def walk(self):
+        print("This " + self.name + " is walking")
 
     def talk(self):
         print("This duck is qwuacking")
@@ -20,26 +18,26 @@ class Duck(Bird):
     pass
 
 
-class Chicken:
+class Chicken(Bird):
 
     def walk(self):
-        print("This chicken is walking")
+        print("This " + self.name +"is walking")
 
     def talk(self):
         print("This chicken is clucking")
 
-# class Person():
+class Person():
 
-#     def catch(self, duck):
-#         duck.walk()
-#         duck.talk()
-#         print("You caught the critter!")
+    def catch(self, duck):
+        duck.walk()
+        duck.talk()
+        print("You caught the critter!")
 
-bird = Bird("Pierd")
-duck = Duck("Pierd")
-chicken = Chicken()
-# person = Person()
+bird = Bird("Bird")
+duck = Duck("Dauck")
+chicken = Chicken("Chaicken")
+person = Person()
 
-# person.catch(duck)
+person.catch(chicken)
 
-print(duck.walk("Pierd"))
+# print(duck.walk())
